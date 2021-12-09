@@ -1,0 +1,1 @@
+<h1 class="text-2xl font-bold mb-12 mt-10 text-center text-gray-600">Mis minutas</h1>
