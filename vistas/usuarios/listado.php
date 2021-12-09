@@ -1,5 +1,5 @@
 <div class="flex">
-    <div id="sidebar" class="w-1/5">
+    <div id="sidebar" class="w-1/5 min-h-screen h-full">
         <nav>
             <ul>
                 <li class="flex justify-end">
@@ -7,7 +7,7 @@
                         style="height: 4em; margin-top:1%;" alt="">
                     <br><br>
                 </li>
-                <li><a href="" class="active">Inicio</a></li>
+                <li><a href="?controlador=usuarios&accion=listar" class="active">Inicio</a></li>
                 <li><a href="">Minuta</a></li>
                 <li><a href="">Agregar Minuta</a></li>
                 <li> <a href="?" class="buttonInicio" style="color: white;">Cerrar Sesion</a></li>
