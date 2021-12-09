@@ -8,8 +8,8 @@
                     <br><br>
                 </li>
                 <li><a href="?controlador=usuarios&accion=listar" class="active">Inicio</a></li>
-                <li><a href="">Minuta</a></li>
-                <li><a href="">Agregar Minuta</a></li>
+                <li><a  href="?controlador=minutas&accion=listar">Minuta</a></li>
+                <li><a  href="?controlador=usuarios&accion=registrar">Agregar Minuta</a></li>
                 <li> <a href="?" class="buttonInicio" style="color: white;">Cerrar Sesion</a></li>
             </ul>
         </nav>
