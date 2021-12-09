@@ -14,9 +14,15 @@
             </ul>
         </nav>
     </div>
-    <div class="w-4/5 px-10 pb-10">
-        <h1>Registro de Usuarios</h1>
-        <div class="contenedor">
+    <div class="w-4/5 pb-10">
+        <div class="flex w-full justify-end bg-gray-800 px-10 py-5">
+            <div class="flex items-center space-x-4 text-white cursor-pointer">
+                <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="Vigilante 1" class="object-cover object-center rounded-full w-10 h-10" />
+                <span>Vigilante 1</span>
+            </div>
+        </div>
+        <h1 class="px-10 pt-5">Registro de Usuarios</h1>
+        <div class="contenedor mx-10">
             <form action="?controlador=usuarios&accion=registrar" method="POST">
                 <label for="user-role">Rol</label><br> 
                 <select name="rol" id="user-role"> 

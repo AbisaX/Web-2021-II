@@ -14,8 +14,14 @@
             </ul>
         </nav>
     </div>
-    <div class="w-4/5 px-10">
-        <div class="flex justify-between items-center">
+    <div class="w-4/5">
+        <div class="flex w-full justify-end bg-gray-800 px-10 py-5">
+            <div class="flex items-center space-x-4 text-white cursor-pointer">
+                <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="Vigilante 1" class="object-cover object-center rounded-full w-10 h-10" />
+                <span>Vigilante 1</span>
+            </div>
+        </div>
+        <div class="flex justify-between items-center px-10">
             <h1 class="text-2xl font-bold mb-12 mt-10 text-center text-gray-600">Listado de Usuarios</h1>
 
             <div class="rounded-md">
@@ -27,6 +33,7 @@
                 </a>
             </div>
         </div>
+        <div class="px-10">
         <table class="table-auto w-full shadow-lg bg-white">
             <thead>
                 <tr>
@@ -56,5 +63,6 @@
                 <?php } ?>
             </tbody>
         </table>
+        </div>
     </div>
 </div>
