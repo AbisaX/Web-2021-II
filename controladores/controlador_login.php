@@ -19,6 +19,11 @@
                     if (strlen($usuario->id) == 0) {
                         $error = "Tu usuario con contraseña no coinciden";
                     } else {
+                        session_start();
+                        $_SESSION["nombre"] = $usuario->nombre;
+                        $_SESSION["id"] = $usuario->id;
+                        $_SESSION["rol"] = $usuario->rol;
+                        
                         if ($usuario->rol == 1) {
                             header("Location:./?controlador=usuarios&accion=listar");
                         } else {
@@ -29,6 +34,14 @@
             }
             
             include_once("vistas/login/inicio-sesion.php");
+        }
+
+        function logout() {
+            session_start();
+            $_SESSION = array();
+            session_destroy();
+            
+            header("Location:./?controlador=login&accion=inicio");
         }
     }
 ?>

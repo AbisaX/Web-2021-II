@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <div class="flex">
     <div id="sidebar" class="w-1/5 min-h-screen h-full">
         <nav>
@@ -10,7 +11,7 @@
                 <li><a href="?controlador=usuarios&accion=listar" class="active">Inicio</a></li>
                 <li><a  href="?controlador=minutas&accion=listar">Minuta</a></li>
                 <li><a  href="?controlador=minutas&accion=registrar">Agregar Minuta</a></li>
-                <li> <a href="?" class="buttonInicio" style="color: white;">Cerrar Sesion</a></li>
+                <li> <a href="?controlador=login&accion=logout" class="buttonInicio" style="color: white;">Cerrar Sesion</a></li>
             </ul>
         </nav>
     </div>
@@ -18,7 +19,7 @@
         <div class="flex w-full justify-end bg-gray-800 px-10 py-5">
             <div class="flex items-center space-x-4 text-white cursor-pointer">
                 <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="Vigilante 1" class="object-cover object-center rounded-full w-10 h-10" />
-                <span>Vigilante 1</span>
+                <span><?php echo $_SESSION["nombre"] ?></span>
             </div>
         </div>
         <h1 class="px-10 pt-5">Registro de Usuarios</h1>

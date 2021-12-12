@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <div class="flex">
     <div id="sidebar" class="w-1/5 min-h-screen h-full">
         <nav>
@@ -10,7 +11,7 @@
                 <li><a href="?controlador=usuarios&accion=listar">Inicio</a></li>
                 <li><a  href="?controlador=minutas&accion=listar" class="active">Minuta</a></li>
                 <li><a  href="?controlador=minutas&accion=registrar">Agregar Minuta</a></li>
-                <li> <a href="?" class="buttonInicio" style="color: white;">Cerrar Sesion</a></li>
+                <li> <a href="?controlador=login&accion=logout" class="buttonInicio" style="color: white;">Cerrar Sesion</a></li>
             </ul>
         </nav>
     </div>
@@ -18,7 +19,7 @@
         <div class="flex w-full justify-end bg-gray-800 px-10 py-5">
             <div class="flex items-center space-x-4 text-white cursor-pointer">
                 <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="Vigilante 1" class="object-cover object-center rounded-full w-10 h-10" />
-                <span>Vigilante 1</span>
+                <span><?php echo $_SESSION["nombre"] ?></span>
             </div>
         </div>
         <div class="flex justify-between items-center px-10">
@@ -37,12 +38,20 @@
         <table class="table-auto w-full shadow-lg bg-white">
             <thead>
                 <tr>
-                <th class="text-xl bg-gray-400 border text-center px-8 py-4 text-gray-100">Descripcion</th>
-                <th class="text-xl bg-gray-400 border text-center px-8 py-4 text-gray-100">Hora</th>
-                <th class="text-xl bg-gray-400 border text-center px-8 py-4 text-gray-100">Fecha</th>
-                <th class="text-xl bg-gray-400 border text-center px-8 py-4 text-gray-100">Opciones</th>
+                <th class="text-xl bg-gray-400 border text-center px-8 py-4 text-gray-100">Descripción</th>
+                <th class="text-xl bg-gray-400 border text-center px-8 py-4 text-gray-100">Fecha y Hora de creación</th>
+                <th class="text-xl bg-gray-400 border text-center px-8 py-4 text-gray-100">Usuario</th>
                 </tr>
             </thead>
+            <tbody class="text-lg text-center">
+                <?php foreach($minutas as $minuta) { ?>
+                    <tr>
+                        <td class="border px-8 py-4"><?php echo $minuta->descripcion ?></td>
+                        <td class="border px-8 py-4"><?php echo $minuta->fechaCreacion ?></td>
+                        <td class="border px-8 py-4"><?php echo $minuta->usuario ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
         </table>
         </div>
     </div>
